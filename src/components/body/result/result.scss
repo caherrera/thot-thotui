@@ -1,0 +1,90 @@
+// Import the constants from the root of src
+@import '../../../constants.scss';
+
+.result-body {
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    flex: 1;
+    height: calc(100% - 300px);
+
+    @media screen and (max-width: $mobile-width) {
+        height: auto;
+    }
+
+    .result-body-text {
+        width: 100%;
+        margin-bottom: 30px;
+
+        .result-title {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            font-size: 1.6rem;
+            span {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .result-group-stadistics {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .results-stadistics {
+            width: 50%;
+            min-width: 50%;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 15px;
+
+            @media screen and (max-width: $mobile-width) {
+                width: 100%;
+            }
+
+            .results-stadistics-title {
+                width: 200px;
+                font-size: 1.7rem;
+                padding-top: 5px;
+
+                @media screen and (max-width: $mobile-width) {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .results-stadistics-about {
+                width: 50px;
+                font-size: 2rem;
+                cursor: pointer;
+            }
+
+            .results-stadistics-bar {
+                width: 300px;
+                height: 30px;
+                line-height: 30px;
+                vertical-align: middle;
+                .progress {
+                    height: 100%;
+                    div {
+                        padding-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .result-cached {
+        display: flex;
+        margin-top: 20px;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .no-match {
+        font-size: 1.7rem;
+    }
+}

@@ -1,0 +1,63 @@
+// Import the constants from the root of src
+@import '../../constants.scss';
+
+.App {
+    text-align: center;
+    height: 100%;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+}
+
+.App-header {
+    position: relative;
+    background-color: #222;
+    height: 70px;
+    padding: 10px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow: hidden;
+
+    .header-title {
+        font-size: 1.8rem;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        padding: 0px 20px;
+
+        @media screen and (max-width: $mobile-width) {
+            font-size: 1.5rem;
+        }
+    }
+
+    .header-mobile-menu {
+        display: none;
+        align-self: flex-end;
+        height: 100%;
+
+        @media screen and (max-width: $mobile-width) {
+            display: flex;
+        }
+
+        .history-button {
+            display: flex;
+            font-size: 2rem;
+            height: 100%;
+            align-self: center;
+            background: #222;
+            border: 1px solid #222;
+        }
+    }
+}
+
+.App-container {
+    position: relative;
+    height: calc(100% - 70px);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}

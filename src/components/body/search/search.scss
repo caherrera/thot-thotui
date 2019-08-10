@@ -1,0 +1,190 @@
+// Import the constants from the root of src
+@import '../../../constants.scss';
+
+.search {
+    position: relative;
+    height: 270px;
+    padding: 30px;
+    border-bottom: 1px dashed #999;
+
+    @media screen and (max-width: $mobile-width) {
+        height: 450px;
+    }
+
+    .search-briefing {
+        display: flex;
+        flex-direction: column;
+
+        .search-briefing-title {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            font-size: 2.2rem;
+        }
+
+        .search-briefing-description {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            margin: 20px 0px;
+            text-align: left;
+        }
+    }
+    .search-form {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+
+        @media screen and (max-width: $mobile-width) {
+            flex-direction: column;
+        }
+
+        .search-form-inputs {
+            width: calc( 100% - 250px );
+            flex-direction: column;
+
+            @media screen and (max-width: $mobile-width) {
+                width: 100%;
+            }
+
+            .form-inputs-group {
+                display: flex;
+                width: 100%;
+                flex-direction: row;
+                
+                .form-inputs-label {
+                    width: 100px;
+                    background: darkred;
+                    height: 50px;
+                    color: #FFF;
+                    font-size: 1.6rem;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-content: center;
+                    align-items: center;
+
+                    @media screen and (max-width: $mobile-width) {
+                        width: 50px;
+                    }
+                }
+
+                input {
+                    width: calc(100% - 100px);
+                    border-top-left-radius: 0px; 
+                    border-bottom-left-radius: 0px;
+                    border-top-right-radius: 5px; 
+                    border-bottom-right-radius: 5px; 
+                    border: 1px solid #666;
+                    height: 50px;
+                    font-size: 1.4rem;
+                    margin-bottom: 20px;
+                    padding-left: 20px;
+
+                    @media screen and (max-width: $mobile-width) {
+                        width: calc(100% - 50px);
+                    }
+                }
+            }
+        }
+
+        .search-form-options {
+            width: 290px;
+
+            @media screen and (max-width: $mobile-width) {
+                width: 100%;
+            }
+
+            .force-option {
+                @media screen and (max-width: $mobile-width) {
+                    width: 100%;
+                }
+
+                .force-option-button {
+                    width: 200px;
+                    height: 50px;
+                    background: darkslateblue;
+                    color: #FFF;
+                    font-size: 1.2rem;
+                    border: 1px solid darkslateblue;
+
+                    @media screen and (max-width: $mobile-width) {
+                        width: 100%;
+                    }
+                }
+
+                .unforce-option-button {
+                    width: 200px;
+                    height: 50px;
+                    background: rgb(15, 114, 97);
+                    color: #FFF;
+                    font-size: 1.3rem;
+                    border: 1px solid rgb(15, 114, 97);
+
+                    @media screen and (max-width: $mobile-width) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .action-option {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                .action-option-select {
+                    position: relative;
+                    width: 140px;
+
+                    @media screen and (max-width: $mobile-width) {
+                        width: 60%;
+                    }
+
+                    span {
+                        position: absolute;
+                        background: darkorange;
+                        padding-top: 15px;
+                        box-sizing: border-box;
+                        margin-left: calc(100% - 20px);
+                        height: 50px;
+                        width: 20px;
+                        color: #FFF;
+
+                        @media screen and (max-width: $mobile-width) {
+                            margin-left: calc(100% - 20px);
+                        }
+                    }
+
+                    .action-option-algorithm {
+                        background: darkorange;
+                        color: #FFF;
+                        border: 1px solid darkorange;
+                        font-size: 1.3rem;
+                        padding-left: 5px;
+                        height: 50px;
+                        width: 140px;
+
+                        @media screen and (max-width: $mobile-width) {
+                            width: 100%;
+                        }
+                    }
+                }
+                
+                .action-option-compare {
+                    background: darkgreen;
+                    color: #FFF;
+                    border: 1px solid darkgreen;
+                    font-size: 1.3rem;
+                    height: 50px;
+                    width: 110px;
+                    text-align: center;
+                    
+                    @media screen and (max-width: $mobile-width) {
+                        width: 40%;
+                    }
+                }
+            }
+        }
+    }
+}

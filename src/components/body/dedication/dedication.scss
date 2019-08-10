@@ -1,0 +1,14 @@
+.dedication {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    .quote {
+        font-size: 1.6rem;
+        .white {
+            color: #FFF;
+        }
+        .red {
+            color: #b60606
+        }
+    }
+}

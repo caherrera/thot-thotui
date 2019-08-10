@@ -1,0 +1,114 @@
+.element {
+    display: flex;
+    flex-direction: row;
+    height: 45px;
+    padding: 5px 10px;
+    cursor: pointer;
+
+    .string {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0px 15px;
+        height: 35px;
+        border: 1px solid #CCC;
+        background: #FFF;
+        overflow: hidden;
+        
+        .string-title {
+            height: 5px;
+            font-size: 0.7rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .string-content {
+            height: 25px;
+            display: flex;
+            padding-top: 5px;
+            font-size: 1.3rem;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    /* Criteria colors and text accord the algorithm used */
+    .criteria {
+        width: 60px;
+        height: 35px;
+        color: #FFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .all {
+        background: #333;
+    }
+
+    .lineal{
+        background: darkred;
+        color: #FFF;
+        font-size: 0.8rem;
+    }
+
+    .ncslineal {
+        background: brown;
+        color: #FFF;
+        font-size: 0.8rem;
+    }
+
+    .levenshtein {
+        background: yellowgreen;
+        color: #FFF;
+        font-size: 0.8rem;
+    }
+
+    .wlevenshtein {
+        background: darkgreen;
+        color: #FFF;
+        font-size: 0.8rem;
+    }
+
+    .damerau {
+        background: darkblue;
+        color: #FFF;
+        font-size: 0.8rem;
+    }
+
+    .ngram {
+        background: darkslateblue;
+        color: #FFF;
+        font-size: 0.8rem;
+    }
+
+    .winkler {
+        background: darkslategray;
+        color: #FFF;
+        font-size: 0.8rem;
+    }
+
+    .cosine {
+        background: darkorange;
+        color: #FFF;
+        font-size: 0.8rem;
+    }
+    
+    .jaccard {
+        background: lightslategray;
+        color: #FFF;
+        font-size: 0.8rem;
+    }
+
+    /* Utils class */
+    .no-border-left {
+        border-left: 0px !important;
+    }
+}
+
+.element:hover {
+    background: #EEE;
+}

@@ -1,0 +1,23 @@
+// Import the constants from the root of src
+@import '../../constants.scss';
+
+.sidebar {
+    max-width: 350px;
+    height: 100%;
+    border-right: 1px solid #999;
+    flex: 1;
+    flex-direction: column;
+
+    @media screen and (max-width: $mobile-width) {
+        display: none;
+        min-width: 100%;
+    }
+}
+
+.menu-mobile {
+    @media screen and (max-width: $mobile-width) {
+        display: flex !important;
+        width: 100%;
+        z-index: 2;
+    }
+}

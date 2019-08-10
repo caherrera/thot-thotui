@@ -1,0 +1,16 @@
+// Import the constants from the root of src
+@import '../../constants.scss';
+
+.body {
+    flex: 1;
+
+    @media screen and (max-width: $mobile-width) {
+        max-width: 100%;
+    }
+}
+
+.mobile-show {
+    @media screen and (max-width: $mobile-width) {
+        display: none;
+    }
+}
