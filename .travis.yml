@@ -1,0 +1,21 @@
+dist: bionic
+#sudo: required
+
+services:
+  - docker
+
+env:
+  global:
+    CACHE_IMAGE: node
+    DOCKER_IMAGE: carlositline/thot-ui
+
+before_script:
+  - docker pull $CACHE_IMAGE || true
+  - case $TRAVIS_BRANCH in master) project=latest;; default) project=$TRAVIS_BRANCH;; esac
+
+script:
+  - docker build --tag $DOCKER_IMAGE:$project "."
+
+after_success:
+  - docker login -u $REGISTRY_USER -p $REGISTRY_PASS
+  - docker push $DOCKER_IMAGE:$project
